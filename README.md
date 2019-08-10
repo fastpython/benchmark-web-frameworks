@@ -18,50 +18,45 @@ Each project has it's own environment stored in `Pipfile`s. You don't need to se
 	- Here's [exhaustive intro](https://realpython.com/pipenv-guide/) for why pipenv exists and should be used
 
 
-## Test Sanic
+## Sanic
 
 Sanic project is originally based on this nice [blog article](https://medium.com/free-code-camp/goin-fast-and-asynchronous-with-python-and-sanic-387d722f3668). It's gives quick overview on Sanic.
 
-1. Clone this repository
+To run Sanic project:
+
 1. Go to the test project folder root `fast-python/sanic`
 1. Run `pipenv install` to install all dependencies
 1. Run `pipenv run python -m project` to run Sanic project test server
 
-As a result you should see something like this:
-
-```
-$ pipenv install
-
-Creating a virtualenv for this project…
-Pipfile: /sanic/Pipfile
-...
-Installing dependencies from Pipfile.lock (668778)…
-  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 29/29 — 00:00:07
-To activate this project's virtualenv, run pipenv shell.
-Alternatively, run a command inside the virtualenv with pipenv run.
-
-$ pipenv run python -m project
-
-Loading .env environment variables…
-[2019-08-01 20:02:36 +0300] [2271] [DEBUG]
-
-                 Sanic
-         Build Fast. Run Fast.
-
-
-[2019-08-01 20:02:36 +0300] [2271] [INFO] Goin' Fast @ http://0.0.0.0:8000
-[2019-08-01 20:02:37 +0300] [2282] [INFO] Starting worker [2282]
-```
-
 And you'll find friendly _hello_ response from [http://0.0.0.0:8000](http://0.0.0.0:8000).
-
-
-## Why care about Sanic?
 
 Sanic is
 
 - Sanic framework is by default using [uvloop](https://magic.io/blog/uvloop-blazing-fast-python-networking/) for events
 - Sanic framework is by default using [ujson](https://pypi.org/project/ujson/) instead of standard json
+
+
+## Aiohttp
+
+[Aiohttp](https://github.com/aio-libs/aiohttp/) is asynchronous HTTP client/server framework for asyncio and Python. It's one of the more popular mini-frameworks supporting asynchronous request handling.
+
+Key Features as they put it themselves:
+
+- Supports both client and server side of HTTP protocol.
+- Supports both client and server Web-Sockets out-of-the-box and avoids Callback Hell.
+- Provides Web-server with middlewares and pluggable routing.
+
+We don't use the client implementation in this framework, but it's nice to that there would be one available if needed.
+
+Framework has [good documentation](https://docs.aiohttp.org) and it's the best place to start when getting into the framework. Also the [list of demos](https://github.com/aio-libs/aiohttp-demos) is nice. The code in this repository is based on them.
+
+To run Aiohttp project:
+
+1. Go to the test project folder root `fast-python/aiohttp`
+1. Run `pipenv install` to install all dependencies
+1. Run `pipenv run python -m project` to run Sanic project test server
+
+And you'll find friendly _hello_ response from [http://0.0.0.0:8000](http://0.0.0.0:8000).
 
 
 

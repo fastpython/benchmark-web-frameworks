@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+aiohttp = "*"
+secure = "*"
+pathlib = "*"
+pytoml = "*"
+databases = {version = "*",extras = ["postgresql"]}
+project = {editable = true,path = "."}
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
