@@ -6,8 +6,6 @@ Benchmarking and testing different Python frameworks and tools.
 
 Each project has it's own environment stored in `Pipfile`s. You don't need to setup all projects, but just the one you want to test.
 
-## Pre-setup
-
 1. You'll need Python 3.6+
 	- One option is to use [conda](https://docs.conda.io/en/latest/) for handling different Python versions
 	- If you are not using Windows, there's also [pyenv](https://github.com/pyenv/pyenv) that you should consider
@@ -18,13 +16,28 @@ Each project has it's own environment stored in `Pipfile`s. You don't need to se
 	- Here's [exhaustive intro](https://realpython.com/pipenv-guide/) for why pipenv exists and should be used
 
 
+## Quart
+
+[Quart](https://pgjones.gitlab.io/quart/) is a Python ASGI web microframework. It is intended to provide easy way to use asyncio functionality in a web context.
+
+Important point is that the Quart API is a superset of the Flask API. So, if you are using Flask and would like to test asyncio functionality, Quart is very good option. As [the documentation](https://pgjones.gitlab.io/quart/flask_migration.html) shows moving from Flask to Quart should be very straightforward.
+
+To run Quart project:
+
+1. Go to the test project folder root `fast-python/project-quart`
+1. Run `pipenv install` to install all dependencies
+1. Run `pipenv run python -m project` to run Sanic project test server
+
+And you'll find friendly _hello_ response from [http://0.0.0.0:8000](http://0.0.0.0:8000).
+
+
 ## Sanic
 
 Sanic project is originally based on this nice [blog article](https://medium.com/free-code-camp/goin-fast-and-asynchronous-with-python-and-sanic-387d722f3668). It's gives quick overview on Sanic.
 
 To run Sanic project:
 
-1. Go to the test project folder root `fast-python/sanic`
+1. Go to the test project folder root `fast-python/project-sanic`
 1. Run `pipenv install` to install all dependencies
 1. Run `pipenv run python -m project` to run Sanic project test server
 
@@ -52,7 +65,7 @@ Framework has [good documentation](https://docs.aiohttp.org) and it's the best p
 
 To run Aiohttp project:
 
-1. Go to the test project folder root `fast-python/aiohttp`
+1. Go to the test project folder root `fast-python/project-aiohttp`
 1. Run `pipenv install` to install all dependencies
 1. Run `pipenv run python -m project` to run Sanic project test server
 
