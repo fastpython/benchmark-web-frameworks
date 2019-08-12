@@ -16,6 +16,21 @@ Each project has it's own environment stored in `Pipfile`s. You don't need to se
 	- Here's [exhaustive intro](https://realpython.com/pipenv-guide/) for why pipenv exists and should be used
 
 
+## Flask
+
+If you have read anything about web development then you must know [Flask](https://github.com/pallets/flask/). Flask is a lightweight WSGI web application framework from [Pallets Projects](https://www.palletsprojects.com/). It began as a simple wrapper around [Werkzeug](https://www.palletsprojects.com/p/werkzeug/) and [Jinja](https://www.palletsprojects.com/p/jinja/) and has become one of the most popular Python web application frameworks. Now competing neck-to-neck with [Django](https://www.djangoproject.com/)
+
+Compared to Django it's lightweight and not that opinionated on how different parts of the project should be done. [Documentation](https://flask.palletsprojects.com) is extensive and, since Flask is widely used, there are loads of tutorials to choose from if you want to get started with Flask.
+
+To run Flask project:
+
+1. Go to the test project folder root `fast-python/project-flask`
+1. Run `pipenv install` to install all dependencies
+1. Run `pipenv run python -m project` to run Sanic project test server
+
+And you'll find friendly _hello_ response from [http://0.0.0.0:8000](http://0.0.0.0:8000).
+
+
 ## Quart
 
 [Quart](https://pgjones.gitlab.io/quart/) is a Python ASGI web microframework. It is intended to provide easy way to use asyncio functionality in a web context.
