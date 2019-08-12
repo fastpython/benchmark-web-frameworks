@@ -6,6 +6,7 @@ Included frameworks are:
 
 - [Django](https://www.djangoproject.com/)
 - [Flask](https://flask.palletsprojects.com)
+- [Pyramid](https://trypyramid.com/)
 - [Quart](https://pgjones.gitlab.io/quart/)
 - [Sanic](https://github.com/huge-success/sanic)
 - [Aiohttp](https://github.com/aio-libs/aiohttp/)
@@ -32,9 +33,11 @@ Generally there are two requirements.
 
 ## Django
 
-[Django](https://www.djangoproject.com/) is *the* framework for Python web development looking for a "batteries include" option. It has everything you need. Django is also opinionated. It'll provide suggestion for all parts of your web application. For some use cases, it is likely much more than you need, but it's still the most popular Python web framework there is.
+[Django](https://www.djangoproject.com/) is *the* framework for Python web development if looking for a "batteries include" option. It has everything you need - especially if you don't know what you'll need. Django is opinionated. It'll provide suggestion for all parts of your web application. For some use cases, it is likely much more than you need, but it's still the most popular Python web framework there is.
 
 To run Django project you need a few more commands than other frameworks - migrations. There's a reason other frameworks are called _micro_. They don't provide that much, but on the other hand you don't need to do that much setup procedures. In addition of requiring more commands there are also a few more files in the project compared to other frameworkds. They are mostly empty, but left there to remind user how Django would like to see the project structure.
+
+Django is WSGI based and doesn't support the latest goods of `async/await`, but async support is listed as important part of [road map](https://www.aeracode.org/2018/06/04/django-async-roadmap/) in [DEP 0009](https://github.com/django/deps/blob/a7080e6f830815829fcee2f2b061f59bdeed489d/accepted/0009-async.rst). We'll see.
 
 To run Django project:
 
@@ -73,6 +76,19 @@ Important aspect of Quart is that the API is a superset of the Flask API. So, if
 To run Quart project:
 
 1. Go to the test project folder root `fast-python/project-quart`
+1. Run `pipenv install` to install all dependencies
+1. Run `pipenv run python -m project` to run test server
+
+And you'll find friendly _hello_ response from [http://0.0.0.0:8000](http://0.0.0.0:8000).
+
+
+## Pyramid
+
+[Pyramid](https://trypyramid.com/) is a framework that aims to hit between huge frameworks (i.e. Django) and smaller ones (i.e. Flask). Pyramid is nowhere near as popular if you read [Github stars](https://github.com/Pylons/pyramid), but is well liked when used. It's part of [Pylons project](https://pylonsproject.org/).
+
+To run Pyramid project:
+
+1. Go to the test project folder root `fast-python/project-pyramid`
 1. Run `pipenv install` to install all dependencies
 1. Run `pipenv run python -m project` to run test server
 
