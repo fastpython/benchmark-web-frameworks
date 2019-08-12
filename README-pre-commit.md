@@ -32,7 +32,6 @@ Git hooks can greatly increase your productivity as a developer. In Congrid proj
 - Find bad code structure
 - Look for [code smells](https://en.wikipedia.org/wiki/Code_smell)
 
-
 # Install hooks
 
 To setup Git pre-commit hooks you need to install pre-commit settings with:
@@ -40,7 +39,6 @@ To setup Git pre-commit hooks you need to install pre-commit settings with:
 ```
 pre-commit install
 ```
-
 
 # Configure hooks
 
